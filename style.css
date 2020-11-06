@@ -1,0 +1,175 @@
+html {
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* NAVIGATION */
+
+h1 {
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: black;
+    color: white;
+    min-height: 12.5vh;
+}
+
+nav ul li {
+    display: inline;
+    padding: 1rem;
+}
+
+/* SPLASH IMAGERY */
+section.splash {
+    width: 100%;
+    height: 87.5vh;
+    background-size: cover;
+    background-image: url('./assets/img/bushy.jpg');
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+section.splash .splash-box {
+    color: black;
+    position: absolute;
+    top: 62.5%;
+    left: 50%;
+    transform: translate(-50%, -62.5%);
+    justify-content: center;
+    background: white;
+    opacity: 0.5;
+    width: 50vw;
+    height: 25vh;
+    overflow: hidden;
+}
+
+.splash h2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    z-index: 5000;
+}
+
+@media (max-width: 767px) {
+    section.splash {
+        background-image: url('./assets/img/bushy-mob.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-top: 125%;
+        height: 100%;
+    }
+
+    section.splash .splash-box,
+    section.splash h2 {
+        display: none;
+    }
+}
+
+/* HISTORY */
+section.history {
+    padding: 4rem 15px;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+section.history img {
+    max-width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+div.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+
+section.history h2 {
+    padding-bottom: 2rem;
+    font-size: 2.5rem;
+    display: block;
+    justify-content: flex-end;
+    text-transform: uppercase;
+}
+
+section.history p {
+    line-height: 2;
+    padding-left: 2rem;
+}
+
+@media (max-width: 920px) {
+    section.history {
+        flex-direction: column-reverse;
+    }
+
+    div.text {
+        text-align: center;
+    }
+
+    div.text p {
+        padding-bottom: 4rem;
+        padding-left: 0px;
+    }
+}
+
+/* GALLERY */
+section.gallery {
+    background: #C0C0C0;
+    padding: 4rem 15px;
+}
+
+section.gallery h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+section.gallery .gallery-grid {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: 1fr;
+}
+
+section.gallery img {
+    width: 100%;
+}
+
+footer {
+    text-transform: uppercase;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 12px;
+    }
+}
